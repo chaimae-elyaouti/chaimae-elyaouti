@@ -1,247 +1,1001 @@
 <!DOCTYPE html>
-<html lang="fr" dir="ltr">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chaimae El Yaouti | AI Builder Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Syne:wght@400;500;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="stylesheet.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Chaimae El Yaouti — Data Science Engineering Student @ INSEA. Engineering data pipelines & building AI products." />
+  <title>Chaimae El Yaouti — Portfolio</title>
+  <link rel="stylesheet" href="stylesheet.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
 
-    <a href="#main-content" class="skip-link">Passer au contenu</a>
-
-    <div id="loader">
-        <div class="loader-wrapper">
-            <div class="loader-ring"></div>
-            <div class="loader-ring-2"></div>
-            <div class="loader-text">Initialisation des systèmes...</div>
-        </div>
+  <div id="loader">
+    <div class="loader-logo">CHAIMAE.DATA</div>
+    <div class="loader-bar-wrap">
+      <div class="loader-bar"></div>
     </div>
+    <div class="loader-pct" id="loader-pct">0%</div>
+  </div>
 
-    <div id="cursor-ring"></div>
-    <div id="cursor-dot"></div>
+  <div class="bg-grid" aria-hidden="true"></div>
+  <div class="bg-orb bg-orb-1" aria-hidden="true"></div>
+  <div class="bg-orb bg-orb-2" aria-hidden="true"></div>
 
-    <div class="mesh-bg"></div>
+  <nav role="navigation" aria-label="Main Navigation">
+    <div class="nav-logo">Chaimae <span>El Yaouti</span></div>
+    
+    <ul class="nav-links">
+      <li><a href="#hero">Home</a></li>
+      <li><a href="#projects">Systems &amp; Projects</a></li>
+      <li><a href="#timeline">Timeline &amp; Experience</a></li>
+      <li><a href="#certifications">Expertise &amp; Certifications</a></li>
+      <li><a href="images/CV_Chaimae_El_Yaouti.pdf" target="_blank" style="color: var(--accent-ice); font-weight: 700;">CV / Resume</a></li>
+    </ul>
+    
+    <a href="mailto:chaimae.elyaouti.ds@gmail.com" class="lang-switcher" style="display: inline-block; text-decoration: none;">Get in touch</a>
+  </nav>
 
-    <nav>
-        <a href="#" class="nav-brand">
-            <div class="logo-trace-container">Chaimae.Data</div>
-        </a>
-        <div class="nav-links">
-            <a href="#hero" class="nav-link-btn">Accueil</a>
-            <a href="#projets" class="nav-link-btn">Systèmes & Projets</a>
-            <a href="#expertises" class="nav-link-btn">Expertises</a>
-        </div>
-        <div class="nav-controls">
-            <div class="lang-switcher">
-                <button class="active">FR</button>
-                <span class="sep">|</span>
-                <button>EN</button>
-            </div>
-        </div>
-    </nav>
+  <div id="app">
 
-    <main id="main-content">
+    <section id="hero" style="display: grid; grid-template-columns: 1.25fr 0.75fr; gap: 40px; align-items: center; min-height: 90vh;">
+      <div class="hero-left">
+        <p class="hero-eyebrow">State Engineering Student in Data Science @ INSEA Rabat</p>
+        <h1 class="hero-title" style="font-size: clamp(2rem, 4.2vw, 3.5rem); line-height: 1.2; margin-bottom: 20px;">
+          Bridging Rigorous <em>Statistical Modeling</em><br>
+          with Production Data Engineering.
+        </h1>
+        <p class="hero-subtitle" style="font-size: 0.95rem; line-height: 1.7; color: var(--text-secondary); margin-bottom: 36px;">
+          Currently pursuing my <strong>State Engineering Degree in Data Science</strong> at INSEA, Morocco's leading institution for quantitative economics and applied statistics, following two years of intensive <strong>CPGE MPSI/MP</strong> tracks.
+          <br><br>
+          I bypass generic AI wrappers by focusing on deep mathematical validity — leveraging <strong>advanced econometrics</strong> (Gamma GLM, Time Series) and translating them into robust, automated pipelines using <strong>Apache Airflow, dbt, and n8n</strong>. Shipped clinical-grade agentic prototypes, ranking <strong>Top 30 out of 500 international teams</strong>.
+        </p>
         
-        <section id="hero">
-            <div class="hero-content">
-                <div class="hero-eyebrow">Data Science Engineering Student</div>
-                <h1 class="hero-title">I engineer data pipelines & build <em>AI products.</em></h1>
-                <p class="hero-sub">Élève ingénieure à l'INSEA. Je conçois des architectures de données structurées et j'implémente des solutions d'intelligence artificielle prêtes pour la production, axées sur l'exécution et l'impact business.</p>
-                <div class="hero-ctas">
-                    <a href="#projets" class="btn-primary">Explorer les Solutions →</a>
-                    <a href="https://linkedin.com/in/ton-username" target="_blank" class="btn-ghost">Connect on LinkedIn</a>
-                </div>
-            </div>
-            <div class="hero-scroll">
-                <div class="scroll-line"></div>
-                <span class="scroll-text">Scroll</span>
-            </div>
-        </section>
-
-        <section class="section" id="projets">
-            <div class="section-inner">
-                <div class="section-header">
-                    <div class="section-eyebrow">Délivrer de la valeur</div>
-                    <h2 class="section-title">Systèmes & <em>Productions</em></h2>
-                    <p class="section-sub">Clique sur une carte pour voir les détails de l'architecture technique et les visuels de chaque projet.</p>
-                </div>
-
-                <div class="projects-grid">
-                    
-                    <div class="project-card" onclick="openModal('modal-banque')">
-                        <div class="project-icon"><i class='bx bx-data'></i></div>
-                        <span class="job-badge" style="float: right; margin-top: -35px;">ELT & NLP</span>
-                        <h3>Analyse de Sentiment Bancaire</h3>
-                        <p style="color: var(--text-secondary); margin: 10px 0; font-size: 0.85rem;">Pipeline End-to-End automatisant le traitement de verbatims clients historiques Google Maps (2020-2026).</p>
-                        <span style="color: var(--accent); font-size: 0.75rem; font-family: var(--font-mono);">Voir l'architecture →</span>
-                    </div>
-
-                    <div class="project-card" onclick="openModal('modal-triage')">
-                        <div class="project-icon"><i class='bx bx-microphone'></i></div>
-                        <span class="job-badge" style="float: right; margin-top: -35px; background: rgba(79, 142, 247, 0.1); color: var(--accent);">Top 30 / 500</span>
-                        <h3>Système Vocal de Triage Clinique</h3>
-                        <p style="color: var(--text-secondary); margin: 10px 0; font-size: 0.85rem;">Prototype d'automatisation en santé mentale développé en 48h lors d'un Hackathon International.</p>
-                        <span style="color: var(--accent); font-size: 0.75rem; font-family: var(--font-mono);">Voir la démo et le schéma →</span>
-                    </div>
-
-                    <div class="project-card" onclick="openModal('modal-glm')">
-                        <div class="project-icon"><i class='bx bx-line-chart'></i></div>
-                        <span class="job-badge" style="float: right; margin-top: -35px;">Statistiques</span>
-                        <h3>Modélisation des Coûts Médicaux</h3>
-                        <p style="color: var(--text-secondary); margin: 10px 0; font-size: 0.85rem;">Rigueur mathématique et diagnostic statistique appliqué aux distributions asymétriques.</p>
-                        <span style="color: var(--accent); font-size: 0.75rem; font-family: var(--font-mono);">Voir les diagnostics mathématiques →</span>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
-        <section class="section" id="expertises">
-            <div class="section-inner">
-                <div class="contact-grid">
-                    <div>
-                        <div class="section-eyebrow">Vitesse d'apprentissage</div>
-                        <h2 class="section-title">Certifications <em>Majeures</em></h2>
-                        <div class="contact-types">
-                            <div class="contact-type-card">
-                                <div class="contact-type-icon"><i class='bx bx-badge-check'></i></div>
-                                <div>
-                                    <h4>Oracle Cloud Infrastructure (OCI)</h4>
-                                    <p>Generative AI Professional & AI Foundations Associate</p>
-                                </div>
-                            </div>
-                            <div class="contact-type-card">
-                                <div class="contact-type-icon"><i class='bx bx-badge-check'></i></div>
-                                <div>
-                                    <h4>NVIDIA Deep Learning Institute</h4>
-                                    <p>Spécialisation Deep Learning appliqué</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div>
-                        <div class="section-eyebrow">Stack d'exécution</div>
-                        <h2 class="section-title">Core <em>Infrastructure</em></h2>
-                        <div class="contact-form" style="margin-top: 24px;">
-                            <div class="form-group">
-                                <label>Data Engineering & Architectures</label>
-                                <div style="color: var(--text-secondary); font-size: 0.95rem;">
-                                    Apache Airflow, dbt, PostgreSQL, ETL/ELT pipelines, Web Scraping.
-                                </div>
-                            </div>
-                            <div class="form-group" style="margin-top: 15px;">
-                                <label>Data Science & Algorithmes</label>
-                                <div style="color: var(--text-secondary); font-size: 0.95rem;">
-                                    Python (Pandas, NumPy, Scikit-learn), R, Modèles GLM, NLP (LDA, Analyse de sentiment), Séries Temporelles.
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <div id="modal-banque" class="modal-overlay" onclick="closeModalOnOverlay(event)">
-        <div class="modal-content">
-            <button class="modal-close" onclick="closeModal('modal-banque')">×</button>
-            <div class="modal-header">
-                <span class="modal-tag">Architecture Technique</span>
-                <h2>Analyse de Sentiment Bancaire</h2>
-            </div>
-            <div class="modal-section">
-                <h3>Visualisation de l'Architecture & Data Flow</h3>
-                <img src="images/architecture-banque.png" alt="Architecture du Pipeline Data" style="width:100%; border-radius:12px; margin-bottom:20px; border:1px solid var(--glass-border);">
-                <p><strong>• Data Engineering :</strong> Ingestion automatisée via un pipeline ELT robuste orchestré par Apache Airflow, transformation structurée avec dbt et stockage au sein d'une base PostgreSQL modélisée en Schéma en Étoile.</p>
-                <p style="margin-top: 10px;"><strong>• Data Science & Impact :</strong> Traitement du langage naturel (NLP) via Topic Modeling (LDA) pour extraire les motifs d'insatisfaction et calcul du Net Sentiment Score (NSS global -49,78%). Restitution sur Looker Studio.</p>
-            </div>
+        <div class="hero-actions" style="margin-bottom: 32px;">
+          <a href="#projects" class="btn-primary">
+            View Shipped Projects
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true" style="margin-left: 4px;">
+              <path d="M1 7h12M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+          <a href="images/CV_Chaimae_El_Yaouti.pdf" download class="btn-ghost">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/>
+            </svg>
+            Download CV
+          </a>
         </div>
+
+        <div class="hero-social-pills" style="display: flex; gap: 16px; align-items: center;">
+          <a href="https://www.linkedin.com/in/chaimae-el-yaouti/" target="_blank" rel="noopener noreferrer" style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-secondary); display: flex; align-items: center; gap: 6px;" class="stack-pill">
+            <i class='bx bxl-linkedin' style="font-size: 1rem; color: var(--accent-ice);"></i> LinkedIn
+          </a>
+          <a href="https://github.com/chaimae-elyaouti" target="_blank" rel="noopener noreferrer" style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-secondary); display: flex; align-items: center; gap: 6px;" class="stack-pill">
+            <i class='bx bxl-github' style="font-size: 1rem;"></i> GitHub
+          </a>
+          <a href="https://devpost.com/chaimae-elyaouti-ds" target="_blank" rel="noopener noreferrer" style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-secondary); display: flex; align-items: center; gap: 6px;" class="stack-pill">
+            <i class='bx bx-code-block' style="font-size: 1rem;"></i> Devpost
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-right" style="display: flex; justify-content: center; position: relative;">
+        <div style="position: relative; width: 100%; max-width: 320px; aspect-ratio: 4/5; border-radius: var(--radius-lg); border: 1px solid var(--border-active); overflow: hidden; background: var(--bg-surface); box-shadow: 0 20px 40px rgba(0,0,0,0.3);">
+          <img src="images/profile.png" alt="Chaimae El Yaouti" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.style.display='none'; this.parentElement.innerHTML='<div style=\'position:absolute; inset:0; display:flex; align-items:center; justify-content:center; font-family:var(--font-mono); font-size:0.8rem; color:var(--text-muted);\'&gt;&lt;images/profile.png&gt;&lt;/div&gt;';">
+        </div>
+      </div>
+
+      <div class="hero-stats" style="grid-column: 1 / -1; margin-top: 48px;">
+        <div class="stat-item">
+          <div class="stat-value">6<span>+ Years</span></div>
+          <div class="stat-label">Historical Data Audited</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-value">Top 5<span></span></div>
+          <div class="stat-label">International AI Finalist</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-value">4<span>×</span></div>
+          <div class="stat-label">Cloud &amp; AI Credentials</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-value">3<span> Frameworks</span></div>
+          <div class="stat-label">Airflow / dbt / n8n Production</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <div class="section-header reveal">
+        <p class="section-label">Production Systems &amp; Quantitative Research</p>
+        <h2 class="section-title">Systems &amp; <em>Projects</em></h2>
+        <p class="section-desc">A curated selection of end-to-end projects — from raw data ingestion to production deployment and strategic visualization.</p>
+      </div>
+
+      <div class="projects-grid">
+
+        <article class="project-card reveal" onclick="openModal('modal-1')" role="button" tabindex="0" aria-label="Open Bank Sentiment Observatory project">
+          <div style="width: 100%; aspect-ratio: 16/9; overflow: hidden; border-radius: var(--radius-md); margin-bottom: 20px; border: 1px solid var(--border); background: var(--bg-base);">
+            <img src="images/bank-sentiment-dashboard.png" alt="Moroccan Banking Sentiment Dashboard Preview" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.style.display='none';">
+          </div>
+          <div class="card-number">// SYS-001 · DATA ENGINEERING &amp; NLP</div>
+          <div class="card-badge">ELT Pipeline · NLP</div>
+          <h3 class="card-title">Moroccan Banking Sentiment Observatory</h3>
+          <p class="card-desc">Automated ELT pipeline orchestrated by Apache Airflow and dbt. Scraped, modeled, and analyzed 6 years of historical trilingual customer verbatims inside a PostgreSQL Star Schema.</p>
+          <div class="card-tags">
+            <span class="tag">Airflow</span><span class="tag">dbt</span><span class="tag">PostgreSQL</span><span class="tag">LDA (NLP)</span><span class="tag">Looker Studio</span>
+          </div>
+          <div class="card-metric">
+            <span>Customer Experience Insight</span>
+            <span class="metric-value">NSS Global -49.78%</span>
+          </div>
+        </article>
+
+        <article class="project-card reveal" onclick="openModal('modal-2')" role="button" tabindex="0" aria-label="Open Voice-First Clinical Triage project">
+          <div style="width: 100%; aspect-ratio: 16/9; display: flex; gap: 8px; overflow: hidden; border-radius: var(--radius-md); margin-bottom: 20px; border: 1px solid var(--border); background: #070a12;">
+            <div style="flex: 0.8; height: 100%; display: flex; align-items: center; justify-content: center; background: #fafafa; border-right: 1px solid var(--border);">
+              <img src="images/patient-interface.png" alt="SafeListen Patient Interface" style="height: 95%; width: auto; object-fit: contain;">
+            </div>
+            <div style="flex: 1.2; height: 100%; display: flex; align-items: center; justify-content: center; background: #f7f9fa; padding: 4px;">
+              <img src="images/n8n-main-workflow.png" alt="n8n Automation Backend Workflow" style="width: 100%; height: auto; object-fit: contain;">
+            </div>
+          </div>
+          <div class="card-number">// SYS-002 · AUTOMATION &amp; AGENTIC ARCHITECTURE</div>
+          <div class="card-badge">AI Healthcare · Agentic System</div>
+          <h3 class="card-title">SafeListen — Voice-First Clinical Triage System</h3>
+          <p class="card-desc">Bespoke voice-driven emergency routing system engineered during a 48h international hackathon. Bypasses un-predictable LLM hallucinations by enforcing a strict, rule-based clinical validation workflow.</p>
+          <div class="card-tags">
+            <span class="tag">n8n Cloud</span><span class="tag">Webhooks</span><span class="tag">Lovable Pro</span><span class="tag">Web Speech API</span><span class="tag">JavaScript</span>
+          </div>
+          <div class="card-metric">
+            <span>Global Hackathon Standing</span>
+            <span class="metric-value">Top 30 / 500 Teams</span>
+          </div>
+        </article>
+
+        <article class="project-card reveal" onclick="openModal('modal-3')" role="button" tabindex="0" aria-label="Open Bitcoin Forecasting project">
+          <div style="width: 100%; aspect-ratio: 16/9; overflow: hidden; border-radius: var(--radius-md); margin-bottom: 20px; border: 1px solid var(--border); background: var(--bg-base);">
+            <img src="images/bitcoin-results.png" alt="Bitcoin ARIMA Forecast Graph Preview" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.style.display='none';">
+          </div>
+          <div class="card-number">// SYS-003 · QUANTITATIVE FINANCE</div>
+          <div class="card-badge">Time Series · Forecasting</div>
+          <h3 class="card-title">Bitcoin Forecasting Engine via ARIMA</h3>
+          <p class="card-desc">Time series predictive framework running on highly volatile financial distributions. Implements a solid dynamic rolling window forecast tracking protocol.</p>
+          <div class="card-tags">
+            <span class="tag">Python</span><span class="tag">Time Series</span><span class="tag">Box-Jenkins</span><span class="tag">statsmodels</span>
+          </div>
+          <div class="card-metric">
+            <span>Execution Strategy</span>
+            <span class="metric-value">ARIMA Rolling Forecast</span>
+          </div>
+        </article>
+
+        <article class="project-card reveal" onclick="openModal('modal-4')" role="button" tabindex="0" aria-label="Open Medical Expenditures Modeling project">
+          <div style="width: 100%; aspect-ratio: 16/9; overflow: hidden; border-radius: var(--radius-md); margin-bottom: 20px; border: 1px solid var(--border); background: var(--bg-base);">
+            <img src="images/glm-medical-analysis.png" alt="Medical Expenditures Cook Distance Audit Preview" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.style.display='none';">
+          </div>
+          <div class="card-number">// SYS-004 · STATISTICAL AUDITING</div>
+          <div class="card-badge">Econometrics · R Script</div>
+          <h3 class="card-title">Medical Expenditures Risk Modeling Engine</h3>
+          <p class="card-desc">Mathematically audited statistical engine. Formally proved classic OLS regression violations (Shapiro-Wilk) and deployed a flexible Gamma GLM framework.</p>
+          <div class="card-tags">
+            <span class="tag">R</span><span class="tag">GLM Gamma</span><span class="tag">Cook's Distance</span><span class="tag">Shapiro-Wilk</span>
+          </div>
+          <div class="card-metric">
+            <span>Data Integrity Filter</span>
+            <span class="metric-value">87 Influential Points Removed</span>
+          </div>
+        </article>
+
+        <article class="project-card reveal" onclick="openModal('modal-5')" role="button" tabindex="0" aria-label="Open Financial Market Dashboard project">
+          <div style="width: 100%; aspect-ratio: 16/9; overflow: hidden; border-radius: var(--radius-md); margin-bottom: 20px; border: 1px solid var(--border); background: var(--bg-base);">
+            <img src="images/financial-dashboard-preview.png" alt="Financial Market Power BI Dashboard Preview" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.style.display='none';">
+          </div>
+          <div class="card-number">// SYS-005 · BUSINESS INTELLIGENCE</div>
+          <div class="card-badge">BI · Financial Analytics</div>
+          <h3 class="card-title">Financial Market Performance Dashboard</h3>
+          <p class="card-desc">Interactive Power BI analytical environment mapping Apple Inc. (AAPL) against the S&amp;P 500 benchmark. Implements custom Power Query ETL tracks and dynamic quantitative measures using advanced DAX equations.</p>
+          <div class="card-tags">
+            <span class="tag">Power BI</span><span class="tag">DAX</span><span class="tag">Power Query</span><span class="tag">Financial Viz</span>
+          </div>
+          <div class="card-metric">
+            <span>Analytical Scope</span>
+            <span class="metric-value">AAPL vs. S&amp;P 500 Index</span>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <section id="timeline" class="reveal">
+      <div class="section-header">
+        <p class="section-label">Timeline</p>
+        <h2 class="section-title">Education &amp; <em>Experience</em></h2>
+      </div>
+
+      <div class="achievements-section" style="margin-top: 0; padding-top: 0;">
+        <div class="achievement-item">
+          <div class="achievement-icon"><i class='bx bx-briefcase' style="color: var(--accent-ice);"></i></div>
+          <div class="achievement-info">
+            <div class="achievement-title" style="font-size: 1.05rem;">Data Science Intern — Trésorerie Générale du Royaume (TGR) <span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-muted); font-weight: normal; margin-left: 10px;">July 2025</span></div>
+            <div class="achievement-desc" style="margin-top: 6px; font-size: 0.85rem;">
+              • Public Revenue Management System (GIR) Quality Audit: detected account identification fragmentation and provided structural corrective schema.<br>
+              • Exploratory Data Analysis (EDA) on major national cash flows (VAT, Corporate Tax, Income Tax) for predictive forecasting systems.
+            </div>
+          </div>
+        </div>
+
+        <div class="achievement-item">
+          <div class="achievement-icon">🎓</div>
+          <div class="achievement-info">
+            <div class="achievement-title" style="font-size: 1.05rem;">State Engineering Degree in Data Science (In Progress) <span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-muted); font-weight: normal; margin-left: 10px;">2024 — 2027</span></div>
+            <div class="achievement-desc" style="margin-top: 6px; font-size: 0.85rem;">
+              National Institute of Statistics and Applied Economics (INSEA) — Rabat. Core paths: Machine Learning, Advanced Statistics &amp; Probability, Data Engineering (Airflow, dbt, SQL ETL architectures), Time Series Forecasting.
+            </div>
+          </div>
+        </div>
+
+        <div class="achievement-item">
+          <div class="achievement-icon">📚</div>
+          <div class="achievement-info">
+            <div class="achievement-title" style="font-size: 1.05rem;">Classes Préparatoires aux Grandes Écoles (CPGE) <span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-muted); font-weight: normal; margin-left: 10px;">2022 — 2024</span></div>
+            <div class="achievement-desc" style="margin-top: 6px; font-size: 0.85rem;">
+              MPSI — MP Stream (Mathematics, Physics, and Engineering Sciences). Highly intensive selective background focusing on linear algebra, calculus, mathematical proofs, and core algorithmic foundation.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="certifications">
+      <div class="section-header reveal">
+        <p class="section-label">Credentials</p>
+        <h2 class="section-title">Expertise &amp; <em>Certifications</em></h2>
+        <p class="section-desc">Official cloud badges, verified professional industry credentials, and architectural core competencies.</p>
+      </div>
+
+      <p class="stack-label reveal" style="margin-bottom: 24px;">// VERIFIED INDUSTRY CREDENTIALS (CLICK FOR VALIDATION PROOF)</p>
+      
+      <div class="certs-project-grid">
+
+        <article class="project-card reveal" onclick="openModal('modal-cert-1')" role="button" tabindex="0" aria-label="Open Oracle GenAI Certification details">
+          <div style="width: 100%; aspect-ratio: 16/10; overflow: hidden; border-radius: var(--radius-md); margin-bottom: 16px; border: 1px solid var(--border); background: #151d2a; display: flex; align-items: center; justify-content: center; padding: 16px;">
+            <img src="images/cert-oci-genai.png" alt="Oracle Generative AI Professional Badge" style="max-height: 100%; width: auto; object-fit: contain;">
+          </div>
+          <div class="card-number">// CERT-001 · CLOUD INFRASTRUCTURE</div>
+          <div class="card-badge">Oracle Cloud Professional</div>
+          <h3 class="card-title">OCI Generative AI Professional</h3>
+          <p class="card-desc">Advanced technical verification focusing on LLMs, custom fine-tuning frameworks, and RAG architectures.</p>
+          <div class="card-metric">
+            <span>Authority</span>
+            <span class="metric-value">Oracle University</span>
+          </div>
+        </article>
+
+        <article class="project-card reveal" onclick="openModal('modal-cert-2')" role="button" tabindex="0" aria-label="Open Oracle AI Foundations Certification details">
+          <div style="width: 100%; aspect-ratio: 16/10; overflow: hidden; border-radius: var(--radius-md); margin-bottom: 16px; border: 1px solid var(--border); background: #151d2a; display: flex; align-items: center; justify-content: center; padding: 16px;">
+            <img src="images/cert-oci-ai-foundations.png" alt="Oracle AI Foundations Associate Badge" style="max-height: 100%; width: auto; object-fit: contain;">
+          </div>
+          <div class="card-number">// CERT-002 · ARTIFICIAL INTELLIGENCE</div>
+          <div class="card-badge">Oracle Cloud Associate</div>
+          <h3 class="card-title">OCI AI Foundations Associate</h3>
+          <p class="card-desc">Core foundational tracking covering machine learning models, computer vision, and automated operations.</p>
+          <div class="card-metric">
+            <span>Authority</span>
+            <span class="metric-value">Oracle University</span>
+          </div>
+        </article>
+
+        <article class="project-card reveal" onclick="openModal('modal-cert-nv')" role="button" tabindex="0" aria-label="Open NVIDIA Deep Learning Certification details">
+          <div style="width: 100%; aspect-ratio: 16/10; overflow: hidden; border-radius: var(--radius-md); margin-bottom: 16px; border: 1px solid var(--border); background: #151d2a; display: flex; align-items: center; justify-content: center; padding: 16px;">
+            <img src="images/cert-nvidia-dli.png" alt="NVIDIA Deep Learning Institute Badge" style="max-height: 90%; width: auto; object-fit: contain;">
+          </div>
+          <div class="card-number">// CERT-003 · DEEP LEARNING</div>
+          <div class="card-badge">NVIDIA Competency</div>
+          <h3 class="card-title">Fundamentals of Deep Learning</h3>
+          <p class="card-desc">Hands-on pipeline execution focusing on neural network initialization, bias optimization, and CNN/RNN tasks.</p>
+          <div class="card-metric">
+            <span>Authority</span>
+            <span class="metric-value">NVIDIA Corporation</span>
+          </div>
+        </article>
+
+        <article class="project-card reveal" onclick="openModal('modal-cert-bcg')" role="button" tabindex="0" aria-label="Open BCG X Certification details">
+          <div style="width: 100%; aspect-ratio: 16/10; overflow: hidden; border-radius: var(--radius-md); margin-bottom: 16px; border: 1px solid var(--border); background: #151d2a; display: flex; align-items: center; justify-content: center; padding: 16px;">
+            <img src="images/cert-bcgx.png" alt="BCG X Data Science Simulation Badge" style="max-height: 100%; width: auto; object-fit: contain;">
+          </div>
+          <div class="card-number">// CERT-004 · INDUSTRY SIMULATION</div>
+          <div class="card-badge">BCG X Credentials</div>
+          <h3 class="card-title">Data Science Job Simulation</h3>
+          <p class="card-desc">Completed strategic practical workflows tracking feature engineering loops and predictive business diagnostics.</p>
+          <div class="card-metric">
+            <span>Authority</span>
+            <span class="metric-value">Forage Platforms</span>
+          </div>
+        </article>
+
+      </div>
+
+      <div class="stack-section reveal" style="margin-top: 64px;">
+        <p class="stack-label">// PRODUCTION ECOSYSTEM</p>
+        <div class="stack-pills">
+          <span class="stack-pill">Python</span><span class="stack-pill">Pandas</span><span class="stack-pill">Scikit-learn</span>
+          <span class="stack-pill">XGBoost</span><span class="stack-pill">SQL</span><span class="stack-pill">PostgreSQL</span>
+          <span class="stack-pill">R Script</span><span class="stack-pill">Git / GitHub</span><span class="stack-pill">Apache Airflow</span>
+          <span class="stack-pill">dbt</span><span class="stack-pill">n8n Cloud</span><span class="stack-pill">Power BI</span>
+          <span class="stack-pill">Looker Studio</span><span class="stack-pill">statsmodels</span><span class="stack-pill">Multilingual NLP</span>
+        </div>
+      </div>
+
+      <div style="margin-top: 64px;">
+        <p class="stack-label reveal" style="margin-bottom: 24px;">// TECH COMPETITIONS &amp; AWARDS (CLICK TO VERIFY EVIDENCE)</p>
+        <div class="projects-grid">
+
+          <article class="project-card reveal" onclick="openModal('modal-cert-3')" role="button" tabindex="0" aria-label="Open Hack for Health Equity details">
+            <div style="width: 100%; aspect-ratio: 16/9; overflow: hidden; border-radius: var(--radius-md); margin-bottom: 20px; border: 1px solid var(--border); background: #151d2a; display: flex; align-items: center; justify-content: center; padding: 12px;">
+              <img src="images/cert-young-ai-leaders.png" alt="Hack for Health Equity Participation Certificate Preview" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.style.display='none';">
+            </div>
+            <div class="card-number">// TECHNICAL HACKATHON · MADRID - LINZ</div>
+            <div class="card-badge">International Triage Prototyping</div>
+            <h3 class="card-title">Hack for Health Equity 2026</h3>
+            <p class="card-desc">Active 48h development loop validated inside Austria's AI network and the United Nations AI for Good framework. Ranked Top 30 out of 500 international participants.</p>
+            <div class="card-tags">
+              <span class="tag">Health Equity</span><span class="tag">AI Prototyping</span><span class="tag">Pitching</span>
+            </div>
+            <div class="card-metric">
+              <span>Global Standing</span>
+              <span class="metric-value">Top 30 / 500 Teams</span>
+            </div>
+          </article>
+
+          <article class="project-card reveal" onclick="openModal('modal-cert-4')" role="button" tabindex="0" aria-label="Open E-Health Hackathon Finalist details">
+            <div style="width: 100%; aspect-ratio: 16/9; overflow: hidden; border-radius: var(--radius-md); margin-bottom: 20px; border: 1px solid var(--border); background: #151d2a; display: flex; align-items: center; justify-content: center; padding: 12px;">
+              <img src="images/cert-ehealth-finalist.png" alt="E-Health Hackathon Finalist Medal Preview" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.style.display='none';">
+            </div>
+            <div class="card-number">// GLOBAL GRAND FINALE · CASABLANCA</div>
+            <div class="card-badge">Top 5 Global Finalist</div>
+            <h3 class="card-title">International E-Health Hackathon</h3>
+            <p class="card-desc">Selected as Top 5 International Finalists with the project DermaScope AI. Conceived an instant, accessible dermatological automated screening platform with cancer detection capabilities.</p>
+            <div class="card-tags">
+              <span class="tag">ICESCO</span><span class="tag">UM6SS Center</span><span class="tag">DermaScope AI</span>
+            </div>
+            <div class="card-metric">
+              <span>Competition Layout</span>
+              <span class="metric-value">5 Finalists Selection</span>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+    <section id="contact">
+      <div class="contact-card-box reveal">
+        
+        <div class="modal-label" style="margin-bottom: 12px;">// SYSTEM INTEROPERABILITY &amp; NETWORKING</div>
+        <h2 class="contact-title">Let's engineer something <em>impactful</em>.</h2>
+        
+        <p class="contact-subtitle">
+          Actively seeking a 2-month data science summer internship starting July 2026. Let's discuss data warehouse scaling, predictive modeling pipelines, or production automation workflows.
+        </p>
+
+        <div class="contact-buttons-wrapper">
+          <a href="mailto:chaimae.elyaouti.ds@gmail.com" class="contact-btn contact-btn-main">
+            <i class='bx bx-envelope' style="font-size: 1.2rem;"></i>
+            chaimae.elyaouti.ds@gmail.com
+          </a>
+
+          <a href="https://www.linkedin.com/in/chaimae-el-yaouti/" target="_blank" rel="noopener noreferrer" class="contact-btn contact-btn-sub">
+            <i class='bx bxl-linkedin' style="font-size: 1.2rem;"></i>
+            Connect on LinkedIn
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+  </div><footer>
+
+  </div><footer>
+    <div class="footer-logo">Chaimae <span>El Yaouti</span></div>
+    <div class="footer-copy">© 2026 — Shipped with structural precision</div>
+    <div class="footer-links">
+      <a href="https://www.linkedin.com/in/chaimae-el-yaouti/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      <a href="https://github.com/chaimae-elyaouti" target="_blank" rel="noopener noreferrer">GitHub</a>
+      <a href="mailto:chaimae.elyaouti.ds@gmail.com">Email</a>
     </div>
+  </footer>
 
-    <div id="modal-triage" class="modal-overlay" onclick="closeModalOnOverlay(event)">
-        <div class="modal-content">
-            <button class="modal-close" onclick="closeModal('modal-triage')">×</button>
-            <div class="modal-header">
-                <span class="modal-tag">Prototype Fonctionnel & Automatisation</span>
-                <h2>Système Vocal de Triage Clinique</h2>
-            </div>
-            <div class="modal-section">
-                <h3>Pipeline d'Automation (n8n & Webhooks)</h3>
-                <img src="images/triage-mental.png" alt="Schéma d'automatisation n8n" style="width:100%; border-radius:12px; margin-bottom:20px; border:1px solid var(--glass-border);">
-                <p><strong>• Logique Système :</strong> Extraction automatique de variables cliniques à partir de flux vocaux. Calcul instantané d'un score de sévérité basé sur les standards PHQ-9 et C-SSRS pour garantir une IA explicable.</p>
-                <p style="margin-top: 10px;"><strong>• Infrastructure :</strong> Branchement de webhooks et de scénarios automatisés sur n8n avec intégration d'une boucle humaine (Human-in-the-loop) permettant aux cliniciens de valider les cas critiques.</p>
-            </div>
+
+  <div class="modal-overlay" id="modal-1" role="dialog" aria-modal="true" aria-labelledby="modal-1-title" onclick="handleOverlayClick(event, 'modal-1')">
+    <div class="modal-box">
+      <div class="modal-header">
+        <div class="modal-title-wrap">
+          <div class="modal-label">// SYS-001 · END-TO-END DATA WAREHOUSE &amp; NLP SYSTEM</div>
+          <h2 class="modal-title" id="modal-1-title">Moroccan Banking Sentiment Observatory</h2>
         </div>
+        <button class="modal-close" onclick="closeModal('modal-1')" aria-label="Close">✕</button>
+      </div>
+      <div class="modal-body">
+        <div class="modal-tags">
+          <span class="tag">Apache Airflow</span><span class="tag">dbt</span>
+          <span class="tag">PostgreSQL</span><span class="tag">LDA (NLP)</span>
+          <span class="tag">Looker Studio</span><span class="tag">Python</span>
+        </div>
+
+        <div class="modal-metric-row">
+          <div class="modal-metric-chip">NSS Global Score: -49.78%</div>
+          <div class="modal-metric-chip">Trilingual Pipelines (FR / AR / Darija)</div>
+          <div class="modal-metric-chip">6 Years Historical Data (2020-2026)</div>
+        </div>
+
+        <div class="modal-section" style="margin-top:28px;">
+          <div class="modal-section-label">Production Data Architecture &amp; Lineage</div>
+          <p class="modal-text">
+            This system processes unstructured customer verbatims into actionable corporate metrics. The infrastructure relies on an automated Python scraping module orchestrated by <strong>Apache Airflow</strong>. Raw datasets are landed in a centralized <strong>PostgreSQL</strong> instance, where <strong>dbt</strong> manages modular data cleaning and refactoring into an analytical Star Schema layout.
+          </p>
+        </div>
+
+        <div class="modal-section">
+          <div class="modal-section-label">Trilingual Natural Language Processing Layer</div>
+          <p class="modal-text">
+            The core algorithmic engine natively handles a trilingual text distribution: French, Classical Arabic, and low-resource Moroccan Darija. Deployed <strong>Latent Dirichlet Allocation (LDA)</strong> to automatically segment core dissatisfaction topics across the top 5 Moroccan banks. Extracted structural business insights by tracking an aggregated <strong>Net Sentiment Score (NSS)</strong> and a specialized Polarization Index (1.63), mapping sharp territory variations.
+          </p>
+        </div>
+
+        <div class="modal-section">
+          <div class="modal-section-label">System Infrastructure &amp; Lineage Assets</div>
+          <div class="modal-images" style="margin-bottom: 40px;">
+            <div class="modal-img-block">
+              <img src="images/bank-architecture.png" alt="End-to-End Data Pipeline Architecture" loading="lazy" onerror="this.parentElement.style.display='none'"/>
+              <div class="modal-img-caption">// FIG.01 — End-to-End Functional Architecture: From Raw Scraped Verbatims to Looker Studio Decision Layer</div>
+            </div>
+            <div class="modal-img-block">
+              <img src="images/banque-airflow.png" alt="Apache Airflow Directed Acyclic Graph" loading="lazy" onerror="this.parentElement.style.display='none'"/>
+              <div class="modal-img-caption">// FIG.02 — Automated Ingestion &amp; Scheduling DAG Orchestration via Apache Airflow</div>
+            </div>
+            <div class="modal-img-block">
+              <img src="images/banque-dbt.png" alt="Modular SQL Lineage with dbt" loading="lazy" onerror="this.parentElement.style.display='none'"/>
+              <div class="modal-img-caption">// FIG.03 — Data Warehouse Transform Layers (Staging to Analytical Marts Star Schema) tracked via dbt</div>
+            </div>
+          </div>
+
+          <div class="modal-section-label">Analytical Insights &amp; Business Intelligence</div>
+          <div class="modal-images">
+            <div class="modal-img-block">
+              <img src="images/bank-sentiment-dashboard.png" alt="Strategic Insight Dashboard on Looker Studio" loading="lazy" onerror="this.parentElement.style.display='none'"/>
+              <div class="modal-img-caption">// FIG.04 — Global Market Overview on Looker Studio highlighting structural banking sector dissatisfaction (NSS -49.78%)</div>
+            </div>
+            <div class="modal-img-block">
+              <img src="images/umnia-bank.png" alt="Umnia Bank Filtered Performance Analytics" loading="lazy" onerror="this.parentElement.style.display='none'"/>
+              <div class="modal-img-caption">// FIG.05 — Granular Business Intelligence Focus: Deep-dive into Umnia Bank's anomalous positive sentiment track (+23.70%)</div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
+  </div>
 
-    <div id="modal-glm" class="modal-overlay" onclick="closeModalOnOverlay(event)">
-        <div class="modal-content">
-            <button class="modal-close" onclick="closeModal('modal-glm')">×</button>
-            <div class="modal-header">
-                <span class="modal-tag">Rigueur Mathématique & Économétrie</span>
-                <h2>Modélisation des Coûts Médicaux</h2>
-            </div>
-            <div class="modal-section">
-                <h3>Diagnostics de Validation du Modèle</h3>
-                <img src="images/glm-coûts.png" alt="Graphiques de diagnostic statistique" style="width:100%; border-radius:12px; margin-bottom:20px; border:1px solid var(--glass-border);">
-                <p><strong>• Approche Statistique :</strong> Nettoyage rigoureux basé sur l'analyse des points influents (Distance de Cook), la détection de la colinéarité (VIF) et la correction de l'hétéroscédasticité.</p>
-                <p style="margin-top: 10px;"><strong>• Modèle :</strong> Choix et implémentation d'un modèle linéaire généralisé (GLM) Gamma avec fonction de lien Log, mathématiquement supérieur à une régression OLS classique pour traiter des coûts de santé par nature asymétriques.</p>
-            </div>
+  <div class="modal-overlay" id="modal-2" role="dialog" aria-modal="true" aria-labelledby="modal-2-title" onclick="handleOverlayClick(event, 'modal-2')">
+    <div class="modal-box">
+      <div class="modal-header">
+        <div class="modal-title-wrap">
+          <div class="modal-label">// SYS-002 · EXPLAINABLE AI &amp; PRODUCTION AUTOMATION</div>
+          <h2 class="modal-title" id="modal-2-title">SafeListen — Clinical Voice Triage Infrastructure</h2>
         </div>
+        <button class="modal-close" onclick="closeModal('modal-2')" aria-label="Close">✕</button>
+      </div>
+      <div class="modal-body">
+        <div class="modal-tags">
+          <span class="tag">n8n Cloud</span><span class="tag">Webhooks</span>
+          <span class="tag">Lovable Pro</span><span class="tag">Web Speech API</span>
+          <span class="tag">JavaScript</span><span class="tag">Google Sheets API</span>
+        </div>
+
+        <div class="modal-metric-row">
+          <div class="modal-metric-chip">Top 30 / 500 International Finalists</div>
+          <div class="modal-metric-chip">Human-in-the-Loop Validation Model</div>
+          <div class="modal-metric-chip">Deterministic Framework (PHQ-9 / C-SSRS)</div>
+        </div>
+
+        <div class="modal-section" style="margin-top:28px;">
+          <div class="modal-section-label">Deterministic Engineering vs. Black-Box LLMs</div>
+          <p class="modal-text">
+            Built during a strict 48-hour challenge, this software tackles the critical hazard of AI hallucinations in clinical contexts. Instead of delegating diagnostics to standard generative wrappers, the system processes patient voice captures through a custom <strong>JavaScript lexical pattern matcher</strong>. It extracts precise, structured clinical indicators (distress, ideation, intent, plan, access to means) natively aligned with verified medical triage protocols.
+          </p>
+        </div>
+
+        <div class="modal-section">
+          <div class="modal-section-label">Backend Orchestration &amp; Human-in-the-Loop Fallback</div>
+          <p class="modal-text">
+            The data integration layer runs on <strong>n8n node architectures</strong> triggered via asynchronous webhooks. Real-time voice transcriptions are evaluated against deterministic risk scoring algorithms. While low-risk cases receive standard support routing, high-risk flags automatically launch high-priority webhook alerts. This immediately pushes urgent patient data onto a secure <strong>Clinician Response Dashboard</strong> for expert human override and immediate medical deployment.
+          </p>
+        </div>
+
+        <div class="modal-section">
+          <div class="modal-section-label">Technical System Assets</div>
+          <div class="modal-images">
+            <div class="modal-img-block">
+              <div class="modal-patient-ui-container">
+                <img src="images/patient-interface.png" alt="SafeListen Patient Voice Interface View" loading="lazy" onerror="this.parentElement.parentElement.style.display='none'">
+              </div>
+              <div class="modal-img-caption">// FIG.01 — SafeListen Minimalist Voice-First Patient Web Interface built with Lovable Pro</div>
+            </div>
+            <div class="modal-img-block">
+              <img src="images/system-diagram.png" alt="Clinical Voice Input to Escalation Flow Chart" loading="lazy" onerror="this.parentElement.style.display='none'"/>
+              <div class="modal-img-caption">// FIG.02 — Complete End-to-End System Architecture and Deterministic Data Routing Schema</div>
+            </div>
+            <div class="modal-img-block">
+              <img src="images/n8n-main-workflow.png" alt="n8n Production Backend Graph" loading="lazy" onerror="this.parentElement.style.display='none'"/>
+              <div class="modal-img-caption">// FIG.03 — Live Asynchronous Backend Processing and Escalation Logic Node Workflows on n8n Cloud</div>
+            </div>
+            <div class="modal-img-block">
+              <img src="images/high-risk-case.png" alt="High Risk Patient Response Interface" loading="lazy" onerror="this.parentElement.style.display='none'"/>
+              <div class="modal-img-caption">// FIG.04 — Clinician Overriding Dashboard displaying extracted structured clinical risks and decision validation layers</div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
+  </div>
 
-    <footer>
-        <div class="footer-bottom">
-            <span>© 2026 Chaimae El Yaouti — Future Builder à impact numérique.</span>
-            <div class="footer-socials">
-                <a href="#" class="social-btn"><i class='bx bxl-github'></i></a>
-                <a href="#" class="social-btn"><i class='bx bx-envelope'></i></a>
-            </div>
+  <div class="modal-overlay" id="modal-3" role="dialog" aria-modal="true" aria-labelledby="modal-3-title" onclick="handleOverlayClick(event, 'modal-3')">
+    <div class="modal-box">
+      <div class="modal-header">
+        <div class="modal-title-wrap">
+          <div class="modal-label">// SYS-003 · MATHEMATICAL TIME SERIES ENGINEERING</div>
+          <h2 class="modal-title" id="modal-3-title">Bitcoin Forecasting Engine via ARIMA</h2>
         </div>
-    </footer>
+        <button class="modal-close" onclick="closeModal('modal-3')" aria-label="Close">✕</button>
+      </div>
+      <div class="modal-body">
+        <div class="modal-tags">
+          <span class="tag">Python</span><span class="tag">statsmodels</span>
+          <span class="tag">Box-Jenkins Methodology</span><span class="tag">pmdarima</span>
+          <span class="tag">Time Series Analytics</span><span class="tag">yfinance</span>
+        </div>
 
-    <script>
-        // Masquer le loader
-        window.addEventListener('load', () => {
-            document.getElementById('loader').classList.add('hidden');
+        <div class="modal-metric-row">
+          <div class="modal-metric-chip">Prediction Accuracy: 1.76% MAPE</div>
+          <div class="modal-metric-chip">Adaptive Rolling Window Infrastructure</div>
+          <div class="modal-metric-chip">10+ Years Historical Ticker Data</div>
+        </div>
+
+        <div class="modal-section" style="margin-top:28px;">
+          <div class="modal-section-label">Box-Jenkins Mathematical Rigor &amp; Stationarity</div>
+          <p class="modal-text">
+            Forecasting highly volatile assets like Bitcoin requires satisfying strict structural constraints rather than deploying unverified models. This project implements the full <strong>Box-Jenkins framework</strong>. To control the severe non-linear variance, a Multiplicative Decomposition layout was enforced. Unit root validation via the <strong>Augmented Dickey-Fuller (ADF) Test</strong> (p-value: 0.795) formally proved non-stationarity, driving the implementation of a mathematical log-transformation coupled with a first-order chronological differencing loop.
+          </p>
+        </div>
+
+        <div class="modal-section">
+          <div class="modal-section-label">Stochastic Modeling &amp; Rolling Forecast Pipeline</div>
+          <p class="modal-text">
+            Autocorrelation and partial autocorrelation tracking maps (ACF/PACF) were evaluated alongside automated AIC/BIC optimization criteria to select a parsimonious <strong>ARIMA(0,1,1) execution model</strong>. Because static long-term boundaries decay quickly on unpredictable distributions, an adaptive <strong>rolling forecast pipeline</strong> was engineered. The engine dynamically re-calibrates parameter matrices at each time step, appending previous real historical ticks to optimize the next prediction window, achieving an empirical <strong>Mean Absolute Percentage Error (MAPE) of 1.76%</strong>.
+          </p>
+        </div>
+
+        <div class="modal-section">
+          <div class="modal-section-label">Technical System Assets</div>
+          <div class="modal-images">
+            <div class="modal-img-block">
+              <img src="images/bitcoin-split.png" alt="Bitcoin Train and Test Data Distribution Split" loading="lazy" onerror="this.parentElement.style.display='none'"/>
+              <div class="modal-img-caption">// FIG.01 — Historical Multi-Year Dataset Partitioning: Training Space (2014-2023) vs Testing Window (2023-2025)</div>
+            </div>
+            <div class="modal-img-block">
+              <img src="images/bitcoin-decomposition.png" alt="Multiplicative Series Decomposition Panels" loading="lazy" onerror="this.parentElement.style.display='none'"/>
+              <div class="modal-img-caption">// FIG.02 — Advanced Time Series Signal Decomposition isolating underlying Trend, Seasonality, and Stochastic Noise</div>
+            </div>
+            <div class="modal-img-block">
+              <img src="images/bitcoin-results.png" alt="ARIMA Rolling Predictions vs Real Ticker Values" loading="lazy" onerror="this.parentElement.style.display='none'"/>
+              <div class="modal-img-caption">// FIG.03 — Dynamic Adaptive Window Tracking: Live Rolling ARIMA(0,1,1) Predictions vs Real Closing Prices (MAPE: 1.76%)</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="modal-4" role="dialog" aria-modal="true" aria-labelledby="modal-4-title" onclick="handleOverlayClick(event, 'modal-4')">
+    <div class="modal-box">
+      <div class="modal-header">
+        <div class="modal-title-wrap">
+          <div class="modal-label">// SYS-004 · ADVANCED QUANTITATIVE RESEARCH &amp; ECONOMETRICS</div>
+          <h2 class="modal-title" id="modal-4-title">Medical Expenditures Risk Modeling Engine</h2>
+        </div>
+        <button class="modal-close" onclick="closeModal('modal-4')" aria-label="Close">✕</button>
+      </div>
+      <div class="modal-body">
+        <div class="modal-tags">
+          <span class="tag">R Script</span><span class="tag">GLM Gamma</span>
+          <span class="tag">Statistical Diagnostics</span><span class="tag">Shapiro-Wilk Test</span>
+          <span class="tag">Cook's Distance</span><span class="tag">ANOVA Framework</span>
+        </div>
+
+        <div class="modal-metric-row">
+          <div class="modal-metric-chip">Model Optimization: AIC 20,947 (vs. 21,267 OLS)</div>
+          <div class="modal-metric-chip">Data Integrity: 87 Influential Points Removed</div>
+          <div class="modal-metric-chip">Target Effect: Smoking Multiplies Costs by 4.58x</div>
+        </div>
+
+        <div class="modal-section" style="margin-top:28px;">
+          <div class="modal-section-label">Rigorous Statistical Auditing &amp; OLS Violation Proof</div>
+          <p class="modal-text">
+            Standard linear regressions (OLS) collapse when dealing with healthcare risk distributions due to severe right-skewed asymmetry and non-constant variance. This project operates a full econometric auditing pipeline. Formal diagnostic testing via the <strong>Shapiro-Wilk Normality Test</strong> explicitly rejected residual normality (p-value &lt; 2.2e-16), while dynamic heteroscedasticity indicators mapping a classic funnel pattern proved the limits of linear assumptions. Multicollinearity threats were mitigated by tracking Variance Inflation Factors (all VIF &lt; 5).
+          </p>
+        </div>
+
+        <div class="modal-section">
+          <div class="modal-section-label">Generalized Linear Model (GLM) Deployment</div>
+          <p class="modal-text">
+            To achieve mathematical validity, the architecture shifted toward a <strong>Generalized Linear Model (GLM) Gamma framework utilizing a Log link function</strong>, naturally adapting to positive continuous target spaces. Data integrity was safeguarded by evaluating <strong>Cook's Distance</strong> thresholds, filtering out 87 influential observations to prevent estimation bias. The final optimized system achieved an Akaike Information Criterion (AIC) score of 20,947, significantly outperforming linear benchmarks and isolating precise risk multipliers—such as quantifying that smoking status scales annual charges by a factor of 4.58x.
+          </p>
+        </div>
+
+        <div class="modal-section">
+          <div class="modal-section-label">Technical System Assets</div>
+          <div class="modal-images">
+            <div class="modal-img-block">
+              <img src="images/glm-medical-analysis.png" alt="Cooks Distance Influential Points Plot" loading="lazy" onerror="this.parentElement.style.display='none'"/>
+              <div class="modal-img-caption">// FIG.01 — Cook's Distance Outlier Diagnostic: Identifying and removing 87 influential observations breaching the 4/n threshold</div>
+            </div>
+            <div class="modal-img-block">
+              <img src="images/glm-qq-plot.png" alt="Residual Q-Q Normality Violation Plot" loading="lazy" onerror="this.parentElement.style.display='none'"/>
+              <div class="modal-img-caption">// FIG.02 — Residual Normal Q-Q Plot: Proving the systemic S-curve normal distribution violation under OLS constraints</div>
+            </div>
+            <div class="modal-img-block">
+              <img src="images/glm-gamma-density.png" alt="Gamma Distribution Density Profile" loading="lazy" onerror="this.parentElement.style.display='none'"/>
+              <div class="modal-img-caption">// FIG.03 — Target Density Profiling: Mapping the heavily skewed health expenditures curve fitted via a continuous Gamma probability density function</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="modal-5" role="dialog" aria-modal="true" aria-labelledby="modal-5-title" onclick="handleOverlayClick(event, 'modal-5')">
+    <div class="modal-box">
+      <div class="modal-header">
+        <div class="modal-title-wrap">
+          <div class="modal-label">// SYS-005 · DATA VISUALIZATION &amp; BUSINESS INTELLIGENCE</div>
+          <h2 class="modal-title" id="modal-5-title">Financial Market Performance Dashboard</h2>
+        </div>
+        <button class="modal-close" onclick="closeModal('modal-5')" aria-label="Close">✕</button>
+      </div>
+      <div class="modal-body">
+        <div class="modal-tags">
+          <span class="tag">Power BI Desktop</span><span class="tag">DAX Measures</span>
+          <span class="tag">Power Query (ETL)</span><span class="tag">Data Modeling</span>
+        </div>
+
+        <div class="modal-metric-row">
+          <div class="modal-metric-chip">Asset Benchmark: AAPL vs. S&amp;P 500</div>
+          <div class="modal-metric-chip">ETL Engine: Unified Power Query Schemas</div>
+          <div class="modal-metric-chip">Volatility Tracking: Annualized σ√252 Metric</div>
+        </div>
+
+        <div class="modal-section" style="margin-top:24px;">
+          <div class="modal-section-label">Data Ingestion, Transformation &amp; Star Schema Modeling</div>
+          <p class="modal-text">
+            This project constructs a comprehensive Business Intelligence environment to audit and contrast the historical trajectory of Apple Inc. (AAPL) against the market standard S&amp;P 500 index. Raw financial distributions extracted from Yahoo Finance were ingested via <strong>Power Query</strong>. The ETL layer cleans transactional records, standardizes diverse data formats, and handles adjusted closing fields to build a highly optimized, cross-filtered Star Schema data model.
+          </p>
+        </div>
+
+        <div class="modal-section">
+          <div class="modal-section-label">Advanced DAX Engineering &amp; Interactive Restitution</div>
+          <p class="modal-text">
+            The core analytical intelligence layer uses custom <strong>DAX (Data Analysis Expressions)</strong> vectors. Implemented dynamic rolling moving averages to smooth price fluctuations, trend delta metrics to calculate relative asset performance against the index, and an industrialized annualized volatility calculation ($\sigma\sqrt{252}$) driven by historical daily returns. Visual reporting supports chronological drill-through and conditional KPIs, allowing stakeholders to isolate custom windows.
+          </p>
+        </div>
+
+        <div class="modal-section">
+          <div class="modal-section-label">Technical System Assets</div>
+          <div class="modal-images">
+            <div class="modal-img-block">
+              <img src="images/financial-dashboard-preview.png" alt="Live Power BI Financial Report Dashboard" loading="lazy" onerror="this.parentElement.style.display='none'"/>
+              <div class="modal-img-caption">// FIG.01 — Interactive Live Power BI Dashboard displaying historical trend evaluations and comparative stock metrics</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="modal-overlay" id="modal-cert-1" role="dialog" aria-modal="true" onclick="handleOverlayClick(event, 'modal-cert-1')">
+    <div class="modal-box">
+      <div class="modal-header">
+        <div class="modal-title-wrap">
+          <div class="modal-label">// CREDENTIAL VALIDATION LAYER</div>
+          <h2 class="modal-title">OCI Generative AI Professional Proof</h2>
+        </div>
+        <button class="modal-close" onclick="closeModal('modal-cert-1')">✕</button>
+      </div>
+      <div class="modal-body">
+        <div class="modal-section">
+          <div class="modal-section-label">Verified Professional Diploma Asset</div>
+          <div style="display: grid; grid-template-columns: 1fr 1.1fr; gap: 32px; align-items: start;">
+            <div class="modal-img-block" style="background:#151d2a; padding:10px; border-color: var(--border);">
+              <img src="images/cert-oci-genai.png" alt="Oracle Certified Professional Generative AI Diploma">
+            </div>
+            <div>
+              <div class="modal-section-label" style="border:none; padding:0; margin-bottom:8px;">Official Skills Audited:</div>
+              <ul style="padding-left:20px; color:var(--text-secondary); font-size:0.85rem; line-height:1.7; margin-bottom:24px;">
+                <li><strong>Large Language Models (LLMs):</strong> Deep knowledge of foundational model frameworks, prompt engineering, and context parameters.</li>
+                <li><strong>OCI GenAI Engineering:</strong> Hands-on proficiency deploying, managing, and operationalizing enterprise AI service workloads.</li>
+                <li><strong>Advanced Infrastructures:</strong> Building and tracing Retrieval-Augmented Generation (RAG) chatbots, semantic search maps, vector databases, and LangChain orchestration layers.</li>
+              </ul>
+              <div class="modal-section-label" style="border:none; padding:0; margin-bottom:12px; color: var(--text-muted);">Validity: Oct 2025 — Oct 2027</div>
+              <a href="METS_ICI_TON_LIEN_ORACLE" target="_blank" class="btn-primary" style="font-size:0.8rem; height:36px; padding: 0 16px;">Verify Live Credential ↗</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="modal-cert-2" role="dialog" aria-modal="true" onclick="handleOverlayClick(event, 'modal-cert-2')">
+    <div class="modal-box">
+      <div class="modal-header">
+        <div class="modal-title-wrap">
+          <div class="modal-label">// CREDENTIAL FOUNDATIONAL CERTIFICATE</div>
+          <h2 class="modal-title">OCI AI Foundations Associate Proof</h2>
+        </div>
+        <button class="modal-close" onclick="closeModal('modal-cert-2')">✕</button>
+      </div>
+      <div class="modal-body">
+        <div class="modal-section">
+          <div class="modal-section-label">Verified Associate Diploma Asset</div>
+          <div style="display: grid; grid-template-columns: 1fr 1.1fr; gap: 32px; align-items: start;">
+            <div class="modal-img-block" style="background:#151d2a; padding:10px; border-color: var(--border);">
+              <img src="images/cert-oci-ai-foundations.png" alt="Oracle Certified Associate AI Foundations Diploma">
+            </div>
+            <div>
+              <div class="modal-section-label" style="border:none; padding:0; margin-bottom:8px;">Official Skills Audited:</div>
+              <ul style="padding-left:20px; color:var(--text-secondary); font-size:0.85rem; line-height:1.7; margin-bottom:24px;">
+                <li><strong>AI, ML &amp; Deep Learning Basics:</strong> Core distinction paradigms across supervised, unsupervised, and deep sequential models (CNNs, RNNs, LSTMs).</li>
+                <li><strong>OCI Suite Competency:</strong> End-to-end command of Oracle's automated AI and ML portfolios.</li>
+                <li><strong>Generative Frameworks:</strong> Comprehensive deployment principles for automating languages tasks using modern foundation setups and Oracle 23ai Select AI systems.</li>
+              </ul>
+              <div class="modal-section-label" style="border:none; padding:0; margin-bottom:12px; color: var(--text-muted);">Validity: Oct 2025 — Oct 2027</div>
+              <a href="METS_ICI_TON_LIEN_ORACLE" target="_blank" class="btn-primary" style="font-size:0.8rem; height:36px; padding: 0 16px;">Verify Live Credential ↗</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="modal-cert-nv" role="dialog" aria-modal="true" onclick="handleOverlayClick(event, 'modal-cert-nv')">
+    <div class="modal-box">
+      <div class="modal-header">
+        <div class="modal-title-wrap">
+          <div class="modal-label">// CREDENTIAL NVIDIA DEEP LEARNING INSTITUTE</div>
+          <h2 class="modal-title">Fundamentals of Deep Learning</h2>
+        </div>
+        <button class="modal-close" onclick="closeModal('modal-cert-nv')">✕</button>
+      </div>
+      <div class="modal-body">
+        <div class="modal-section">
+          <div class="modal-section-label">Verified Competency Document Asset</div>
+          <div style="display: grid; grid-template-columns: 1fr 1.1fr; gap: 32px; align-items: start;">
+            <div class="modal-img-block" style="background:#151d2a; padding:10px; border-color: var(--border);">
+              <img src="images/cert-nvidia-dli.png" alt="NVIDIA Deep Learning Institute Official Certificate">
+            </div>
+            <div>
+              <div class="modal-section-label" style="border:none; padding:0; margin-bottom:8px;">Skills Audited &amp; Verified:</div>
+              <ul style="padding-left:20px; color:var(--text-secondary); font-size:0.85rem; line-height:1.7; margin-bottom:24px;">
+                <li>Training neural networks from scratch in PyTorch environments.</li>
+                <li>Data augmentation matrices and hyper-parameter optimization loops.</li>
+                <li>Deployment of convolutional layers (CNNs) for image feature extractions.</li>
+              </ul>
+              <div class="modal-section-label" style="border:none; padding:0; margin-bottom:12px; color: var(--text-muted);">Issuer: NVIDIA Corporation · 2025</div>
+              <a href="mailto:chaimae.elyaouti.ds@gmail.com" class="btn-primary" style="font-size:0.8rem; height:36px; padding: 0 16px;">Request Verification Code ↗</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="modal-cert-bcg" role="dialog" aria-modal="true" onclick="handleOverlayClick(event, 'modal-cert-bcg')">
+    <div class="modal-box">
+      <div class="modal-header">
+        <div class="modal-title-wrap">
+          <div class="modal-label">// CREDENTIAL PRACTICAL SIMULATION STRATEGY</div>
+          <h2 class="modal-title">BCG X Data Science Simulation Proof</h2>
+        </div>
+        <button class="modal-close" onclick="closeModal('modal-cert-bcg')">✕</button>
+      </div>
+      <div class="modal-body">
+        <div class="modal-section">
+          <div class="modal-section-label">Verified Performance Document Asset</div>
+          <div style="display: grid; grid-template-columns: 1fr 1.1fr; gap: 32px; align-items: start;">
+            <div class="modal-img-block" style="background:#151d2a; padding:10px; border-color: var(--border);">
+              <img src="images/cert-bcgx.png" alt="BCG X Forage Verified Simulation Certificate">
+            </div>
+            <div>
+              <div class="modal-section-label" style="border:none; padding:0; margin-bottom:8px;">Skills Audited &amp; Verified:</div>
+              <ul style="padding-left:20px; color:var(--text-secondary); font-size:0.85rem; line-height:1.7; margin-bottom:24px;">
+                <li>Business Exploration Framework: Translating corporate goals into diagnostic metrics.</li>
+                <li>Advanced feature engineering and customer predictive churn alignment.</li>
+                <li>Strategic recommendations packaging for corporate steering committees.</li>
+              </ul>
+              <div class="modal-section-label" style="border:none; padding:0; margin-bottom:12px; color: var(--text-muted);">Issuer: Forage Platforms · 2025</div>
+              <a href="#projects" onclick="closeModal('modal-cert-bcg')" class="btn-ghost" style="font-size:0.8rem; height:36px; padding: 0 16px;">View Practical Application Layout</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="modal-cert-3" role="dialog" aria-modal="true" onclick="handleOverlayClick(event, 'modal-cert-3')">
+    <div class="modal-box">
+      <div class="modal-header">
+        <div class="modal-title-wrap">
+          <div class="modal-label">// CREDENTIAL VALIDATION NETWORK</div>
+          <h2 class="modal-title">Hack for Health Equity 2026 — Active Participation</h2>
+        </div>
+        <button class="modal-close" onclick="closeModal('modal-cert-3')">✕</button>
+      </div>
+      <div class="modal-body">
+        <div class="modal-section">
+          <div class="modal-section-label">Verified International Hackathon Engagement</div>
+          <div style="display: grid; grid-template-columns: 1fr 1.1fr; gap: 32px; align-items: start;">
+            <div class="modal-img-block" style="background:#151d2a; padding:10px; border-color: var(--border);">
+              <img src="images/cert-young-ai-leaders.png" alt="Hack for Health Equity Official Certificate Document">
+            </div>
+            <div>
+              <div class="modal-section-label" style="border:none; padding:0; margin-bottom:8px;">Ecosystem &amp; Criteria Validated:</div>
+              <ul style="padding-left:20px; color:var(--text-secondary); font-size:0.85rem; line-height:1.7; margin-bottom:24px;">
+                <li><strong>Global AI Prototyping:</strong> Active 48h development sprints inside Austria's AI network and the United Nations AI for Good framework.</li>
+                <li><strong>Public Health Integration:</strong> Architected functional voice architectures mapped against rigid metrics of clinical equity.</li>
+                <li><strong>Executive Pitching:</strong> Presented explainable systems to senior global epidemiologists and industrial software partners.</li>
+              </ul>
+              <div class="modal-section-label" style="border:none; padding:0; margin-bottom:12px; color: var(--text-muted);">Issuer: Young AI Leaders (Linz / Madrid / WFPHA) · 2026</div>
+              
+              <a href="https://credsverse.com/credentials/20a3302c-26d5-40bf-acaa-0ceb939f421d" target="_blank" class="btn-primary" style="font-size:0.8rem; height:36px; padding: 0 16px;">Verify Live Certificate ↗</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="modal-cert-4" role="dialog" aria-modal="true" onclick="handleOverlayClick(event, 'modal-cert-4')">
+    <div class="modal-box">
+      <div class="modal-header">
+        <div class="modal-title-wrap">
+          <div class="modal-label">// CREDENTIAL OFFICIAL FINALIST RECOGNITION</div>
+          <h2 class="modal-title">E-Health Hackathon International Finalist — DermaScope AI</h2>
+        </div>
+        <button class="modal-close" onclick="closeModal('modal-cert-4')">✕</button>
+      </div>
+      <div class="modal-body">
+        <div class="modal-section">
+          <div class="modal-section-label">Official Certificate of Excellence &amp; Grand Finale Pitch Recognition</div>
+          <div style="display: grid; grid-template-columns: 1fr 1.1fr; gap: 32px; align-items: start;">
+            <div class="modal-img-block" style="background:#151d2a; padding:10px; border-color: var(--border);">
+              <img src="images/cert-ehealth-finalist.png" alt="International E-Health Hackathon Certificate of Excellence">
+            </div>
+            <div>
+              <div class="modal-section-label" style="border:none; padding:0; margin-bottom:8px;">Validated Strategic Contributions:</div>
+              <ul style="padding-left:20px; color:var(--text-secondary); font-size:0.85rem; line-height:1.7; margin-bottom:24px;">
+                <li><strong>DermaScope AI Engineering:</strong> Co-architected an instant, accessible dermatological skin condition screening platform with built-in tumor and cancer detection pipelines.</li>
+                <li><strong>International Stage Selection:</strong> Advanced through rigorous vetting rounds to become one of the 5 global finaliste invited to pitch live at the Grand Finale in Casablanca.</li>
+                <li><strong>Institutional Endorsement:</strong> Reviewed and backed by the Islamic World Educational, Scientific and Cultural Organization (ICESCO) and the UM6SS e-Health Innovation Center.</li>
+              </ul>
+              <div class="modal-section-label" style="border:none; padding:0; margin-bottom:12px; color: var(--text-muted);">Co-organized by: ICESCO &amp; Mohammed V University · Casablanca</div>
+              
+              <a href="https://www.linkedin.com/feed/update/urn:li:ugcPost:7386336188753948672/" target="_blank" class="btn-primary" style="font-size:0.8rem; height:36px; padding: 0 16px;">View Official Recognition ↗</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+  (function () {
+    'use strict';
+
+    /* ── LOADING SCREEN CONTROLLERS ── */
+    const loader   = document.getElementById('loader');
+    const loaderPct = document.getElementById('loader-pct');
+    let pct = 0;
+
+    const loadInterval = setInterval(() => {
+      pct += Math.floor(Math.random() * 18) + 4;
+      if (pct >= 100) {
+        pct = 100;
+        clearInterval(loadInterval);
+        loaderPct.textContent = '100%';
+        setTimeout(() => {
+          loader.classList.add('hidden');
+          document.body.style.overflow = '';
+          initReveal();
+        }, 300);
+      } else {
+        loaderPct.textContent = pct + '%';
+      }
+    }, 120);
+
+    document.body.style.overflow = 'hidden';
+
+    /* ── INTERSECTION OBSERVER SCROLL ANIMATIONS ── */
+    function initReveal() {
+      const revealEls = document.querySelectorAll('.reveal');
+      if (!revealEls.length) return;
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry, i) => {
+          if (entry.isIntersecting) {
+            setTimeout(() => {
+              entry.target.classList.add('visible');
+            }, i * 60);
+            observer.unobserve(entry.target);
+          }
         });
+      }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
 
-        // Fonctions pour ouvrir et fermer les modals de projets
-        function openModal(id) {
-            document.getElementById(id).classList.add('active');
-            document.body.style.overflow = 'hidden'; // Bloque le scroll du site derrière
-        }
-        function closeModal(id) {
-            document.getElementById(id).classList.remove('active');
-            document.body.style.overflow = 'auto'; // Réactive le scroll
-        }
-        function closeModalOnOverlay(event) {
-            if (event.target.classList.contains('modal-overlay')) {
-                event.target.classList.remove('active');
-                document.body.style.overflow = 'auto';
-            }
-        }
+      revealEls.forEach(el => observer.observe(el));
+    }
 
-        // Configuration du curseur si souris présente
-        const ring = document.getElementById('cursor-ring');
-        const dot = document.getElementById('cursor-dot');
-        if (window.matchMedia('(pointer: fine)').matches) {
-            window.addEventListener('mousemove', (e) => {
-                dot.style.transform = `translate3d(${e.clientX - 2.5}px, ${e.clientY - 2.5}px, 0)`;
-                setTimeout(() => {
-                    ring.style.transform = `translate3d(${e.clientX - 20}px, ${e.clientY - 20}px, 0)`;
-                }, 40);
-            });
-            document.querySelectorAll('a, button, .project-card, .contact-type-card').forEach(el => {
-                el.addEventListener('mouseenter', () => document.body.classList.add('cursor-hover'));
-                el.addEventListener('mouseleave', () => document.body.classList.remove('cursor-hover'));
-            });
+    /* ── GLOBAL INTERACTIVE MODAL DIRECTIVES ── */
+    window.openModal = function (id) {
+      const overlay = document.getElementById(id);
+      if (!overlay) return;
+      overlay.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    };
+
+    window.closeModal = function (id) {
+      const overlay = document.getElementById(id);
+      if (!overlay) return;
+      overlay.classList.remove('open');
+      document.body.style.overflow = '';
+    };
+
+    window.handleOverlayClick = function (e, id) {
+      if (e.target === document.getElementById(id)) {
+        closeModal(id);
+      }
+    };
+
+    /* Escape keyboard trigger matrix bindings */
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        document.querySelectorAll('.modal-overlay.open').forEach(m => {
+          m.classList.remove('open');
+          document.body.style.overflow = '';
+        });
+      }
+    });
+
+    /* Accessibility key bindings for project nodes grid */
+    document.querySelectorAll('.project-card[role="button"]').forEach(card => {
+      card.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          card.click();
         }
-    </script>
+      });
+    });
+
+    /* Fixed Navigation styling state shifts */
+    const navEl = document.querySelector('nav');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 40) {
+        navEl.style.background = 'rgba(11,15,23,0.95)';
+      } else {
+        navEl.style.background = 'rgba(11,15,23,0.8)';
+      }
+    }, { passive: true });
+
+  })();
+  </script>
+
 </body>
 </html>
