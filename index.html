@@ -174,15 +174,22 @@
 
         <article class="project-card reveal" onclick="openModal('modal-4')" role="button" tabindex="0" aria-label="Open Medical Expenditures Modeling project">
           <div style="width: 100%; aspect-ratio: 16/9; overflow: hidden; border-radius: var(--radius-md); margin-bottom: 20px; border: 1px solid var(--border); background: var(--bg-base);">
-            <img src="images/glm-medical-analysis.png" alt="Medical Expenditures Cook Distance Audit Preview" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.style.display='none';">
+            <img src="images/glm_hf.png" alt="Medical Expenditures GLM Hugging Face App Preview" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.style.display='none';">
           </div>
           <div class="card-number">// SYS-004 · STATISTICAL AUDITING</div>
           <div class="card-badge">Econometrics · R Script</div>
           <h3 class="card-title">Medical Expenditures Risk Modeling Engine</h3>
           <p class="card-desc">Mathematically audited statistical engine. Formally proved classic OLS regression violations (Shapiro-Wilk) and deployed a flexible Gamma GLM framework.</p>
-          <div class="card-tags">
-            <span class="tag">R</span><span class="tag">GLM Gamma</span><span class="tag">Cook's Distance</span><span class="tag">Shapiro-Wilk</span>
+          
+          <div style="display: flex; justify-content: space-between; align-items: center; width: 100%; margin-bottom: 12px; flex-wrap: wrap; gap: 8px;">
+            <div class="card-tags" style="margin: 0;">
+              <span class="tag">R</span><span class="tag">GLM Gamma</span>
+            </div>
+            <a href="https://huggingface.co/spaces/ChaimaeElyaouti/medical-expenditures-risk-predictor" target="_blank" onclick="event.stopPropagation();" style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--accent-ice); text-decoration: none; display: inline-flex; align-items: center; gap: 4px; border: 1px solid rgba(56, 189, 248, 0.3); padding: 4px 10px; border-radius: var(--radius-md); background: rgba(56, 189, 248, 0.05);">
+              <i class="bx bx-rocket"></i> Live Demo ↗
+            </a>
           </div>
+
           <div class="card-metric">
             <span>Data Integrity Filter</span>
             <span class="metric-value">87 Influential Points Removed</span>
@@ -619,18 +626,28 @@
           <div class="modal-metric-chip">Target Effect: Smoking Multiplies Costs by 4.58x</div>
         </div>
 
-        <div class="modal-section" style="margin-top:28px;">
-          <div class="modal-section-label">Rigorous Statistical Auditing &amp; OLS Violation Proof</div>
-          <p class="modal-text">
-            Standard linear regressions (OLS) collapse when dealing with healthcare risk distributions due to severe right-skewed asymmetry and non-constant variance. This project operates a full econometric auditing pipeline. Formal diagnostic testing via the <strong>Shapiro-Wilk Normality Test</strong> explicitly rejected residual normality (p-value &lt; 2.2e-16), while dynamic heteroscedasticity indicators mapping a classic funnel pattern proved the limits of linear assumptions. Multicollinearity threats were mitigated by tracking Variance Inflation Factors (all VIF &lt; 5).
-          </p>
+        <div class="modal-section">
+          <div class="modal-section-label">Technical System Assets</div>
+          <div class="modal-images">
+            <div class="modal-img-block" style="width: 100%;">
+              <img src="images/glm_hf.png" alt="Hugging Face Interactive Model Simulation Interface" loading="lazy" onerror="this.parentElement.style.display='none'"/>
+              <div class="modal-img-caption">// FIG.01 — Production Deployment: Live Interactive Gradio Simulator hosted on Hugging Face Spaces, implementing the computed INSEA Gamma GLM mathematical coefficients.</div>
+            </div>
+          </div>
         </div>
+
+      </div>
+    </div>
+  </div>
 
         <div class="modal-section">
           <div class="modal-section-label">Generalized Linear Model (GLM) Deployment</div>
           <p class="modal-text">
             To achieve mathematical validity, the architecture shifted toward a <strong>Generalized Linear Model (GLM) Gamma framework utilizing a Log link function</strong>, naturally adapting to positive continuous target spaces. Data integrity was safeguarded by evaluating <strong>Cook's Distance</strong> thresholds, filtering out 87 influential observations to prevent estimation bias. The final optimized system achieved an Akaike Information Criterion (AIC) score of 20,947, significantly outperforming linear benchmarks and isolating precise risk multipliers—such as quantifying that smoking status scales annual charges by a factor of 4.58x.
           </p>
+          <a href="https://huggingface.co/spaces/ChaimaeElyaouti/medical-expenditures-risk-predictor" target="_blank" class="btn-primary" style="font-size:0.8rem; height:36px; padding: 0 16px; margin-top: 20px; display: inline-flex; align-items: center; gap: 8px;">
+            <i class="bx bx-rocket"></i> Test Live GLM Demo ↗
+          </a>
         </div>
 
         <div class="modal-section">
